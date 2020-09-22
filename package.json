@@ -1,8 +1,7 @@
 {
-  "name": "ts",
+  "name": "typescript-testing",
   "version": "1.0.0",
-  "description": "",
-  "main": "greeter.js",
+  "description": "A demo repository for testing Typescript classes with mocha and chai",
   "scripts": {
     "test": "mocha -r ts-node/register tests/**/*.spec.ts",
     "build": "tsc",
