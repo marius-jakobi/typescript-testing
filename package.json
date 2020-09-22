@@ -1,0 +1,25 @@
+{
+  "name": "ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "greeter.js",
+  "scripts": {
+    "test": "mocha -r ts-node/register tests/**/*.spec.ts",
+    "build": "tsc",
+    "build:prod": "tsc --removeComments",
+    "ts:watch": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.2.12",
+    "@types/mocha": "^8.0.3",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3",
+    "ts-node": "^9.0.0"
+  },
+  "dependencies": {
+    "typescript": "^4.0.3"
+  }
+}
