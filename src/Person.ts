@@ -1,12 +1,14 @@
 export class Person {
-  public firstName: string;
-  public lastName: string;
-  public fullName: string;
+  private firstName: string;
+  private lastName: string;
+  private fullName: string;
+  private age: number;
 
   constructor(firstName: string, lastName: string) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.fullName = firstName + " " + lastName;
+    this.age = 42;
   }
 
   // Get full name of person
@@ -20,5 +22,10 @@ export class Person {
   // Get last name of person
   public getLastName(): string {
     return this.lastName;
+  }
+
+  // Get age
+  public getAge(): number {
+    return this.age;
   }
 }
