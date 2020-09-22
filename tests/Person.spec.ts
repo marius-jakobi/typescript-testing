@@ -1,16 +1,18 @@
 import { Person } from "../src/Person";
-import { assert, expect } from "chai";
+import { Address } from "../src/Address";
+import { expect } from "chai";
 import "mocha";
 
 describe("Person class", () => {
-  const person = new Person("Jon", "Doe");
+  const address = new Address("Testing street 395", "12345", "Test City");
+  const person = new Person("Jon", "Doe", address);
 
-  it("should return full name", () => {
+  it("getFullName() should return full name", () => {
     expect(person.getFullName()).to.equal("Jon Doe");
   });
 
-  it("should be typeof string", () => {
-    assert.typeOf(person.getFullName(), "string");
+  it("getFullName() should return a string", () => {
+    expect(person.getFullName()).to.be.a("string");
   });
 
   it("age should be equal to 42", () => {
@@ -19,5 +21,9 @@ describe("Person class", () => {
 
   it("age should be a number", () => {
     expect(person.getAge()).to.be.a("number");
+  });
+
+  it("getAddress() should return a instance of Address", () => {
+    expect(person.getAddress()).to.be.an.instanceOf(Address);
   });
 });
